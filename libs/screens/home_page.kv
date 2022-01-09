@@ -12,7 +12,7 @@
         AppBar:
 
         MDBoxLayout:
-            
+
             ScrollView:
                 bar_width: 0
 
@@ -27,28 +27,26 @@
                         # Stories
                         ScrollView:
                             size_hint_y: None
-                            height: 110
+                            height: 140
                             bar_width: 0
 
                             MDBoxLayout:
                                 adaptive_width: True
-                                spacing: 5
-                                padding: 5
+                                spacing: 20
+                                padding: 20
 
                                 # Story Creator
                                 StoryCreator:
                                     avatar: root.profile_picture
-                                
+
                                 MDBoxLayout:
                                     adaptive_width: True
                                     padding: 5
                                     spacing: 5
                                     id: stories
-                        
+
                         MDSeparator:
 
         # Bottom Navigation Bar
         BottomNav:
             avatar: root.profile_picture
-
-                                        

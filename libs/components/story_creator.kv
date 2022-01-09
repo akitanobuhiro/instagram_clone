@@ -1,60 +1,58 @@
 <StoryCreator>
+# yourstoryのアイコンのwidgetが占有するスペースを確保
     size_hint: None, None
-    size: 62, 100
+    #size_hintは画面に対する比率
+    size: 100, 100
+    #sizeの単位はピクセル
     elevation: 0
+    #elevationは画面に重ねる優先度。数が大きいほど手前に配置される
     padding: 5
+    #paddingは画面端との距離(pix)
     spacing: 5
+    #spacingはこのwiget(画面の機能的なパーツ)内の他のchildren(より小さなパーツ)との距離(pix)
 
     MDRelativeLayout:
         size_hint: None, None
-        size: 60, 100
+        size: 90, 100
 
         Circle:
-            radius: [50, ]  
-            size: 60, 60
+            radius: [80, ]
+            size: 90, 90
             md_bg_color: 1, 1, 1, 1
-        
+            pos_hint: {"center_x": 0.5,"center_y": 0.6}
+
         Circle:
-            radius: [50, ]  
-            size: 55, 55
+            radius: [80, ]
+            size: 85, 85
             md_bg_color: 1, 1, 1, 1
+            pos_hint: {"center_x": 0.5,"center_y": 0.6}
 
         FitImage:
             source: root.avatar
             size_hint: None, None
-            size: 53, 53
-            radius: [53]
-            pos_hint: {"center_x": 0.5,"center_y": 0.6}   
-        
+            size: 83, 83
+            radius: [83]
+            pos_hint: {"center_x": 0.5,"center_y": 0.6}
+
         Circle:
             size_hint: None, None
-            size: 17, 17
+            size: 37, 37
             md_bg_color: 1, 1, 1, 1
-            radius: [17, ]
-            pos_hint: {"center_x": 0.8,"center_y": 0.4} 
-        
+            radius: [37, ]
+            pos_hint: {"center_x": 0.8,"center_y": 0.3}
+
         FitImage:
             size_hint: None, None
             source: 'assets/images/plus-icon-13066.png'
-            size: 15, 15
+            size: 35, 35
             md_bg_color: 0, 0, 1, 1
-            radius: [15, ]
-            pos_hint: {"center_x": 0.8,"center_y": 0.4} 
-        
+            radius: [35, ]
+            pos_hint: {"center_x": 0.8,"center_y": 0.3}
+
         MDLabel:
             text: "Your Story"
             halign: 'center'
-            pos_hint: {"center_x": 0.5,"center_y": 0.1} 
-            font_size: 11
+            pos_hint: {"center_x": 0.5,"center_y": 0.0}
+            font_size: 13
             theme_text_color: 'Custom'
             text_color: 0, 0, 0, 1
-
-    
-
-
-
-
-<Circle@MDCard>
-    size_hint: None, None
-    elevation: 0
-    pos_hint: {"center_x": 0.5,"center_y": 0.6}   
